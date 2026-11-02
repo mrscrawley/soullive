@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Soul Live: музыкальная школа в Алматы для детей и взрослых</title>
+<meta name="description" content="Домбра, фортепиано, вокал, скрипка, гитара, флейта, саксофон, сольфеджио и актёрское мастерство. Индивидуально и в группах, можно с нуля. Алматы, Тулебаева 194.">
+<meta property="og:title" content="Soul Live: от домбры до саксофона">
+<meta property="og:description" content="Музыкальная школа-студия в Алматы для детей и взрослых. Можно с нуля.">
+<!-- Концепт: убрать noindex и подпись .concept перед настоящим запуском -->
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mrscrawley.github.io/soullive/">
+<meta property="og:image" content="https://mrscrawley.github.io/soullive/img/hero.jpg">
+<meta property="og:locale" content="ru_KZ">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1E2D'/%3E%3Cpath d='M4 13.5H28M4 18.5H28' stroke='%23FFC91F' stroke-width='1.8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Golos+Text:wght@400;500;600&family=Unbounded:wght@800&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MusicSchool","name":"Soul Live Studio","url":"https://www.soullive.kz/","telephone":"+77055904160","email":"soullivestudio@gmail.com","address":{"@type":"PostalAddress","streetAddress":"улица Тулебаева, 194","addressLocality":"Алматы","addressCountry":"KZ"},"sameAs":["https://instagram.com/soul.livestudio","https://www.youtube.com/@soullivestudio"]}
+</script>
+<style>
+/* Two dombra strings run through a quiet page: night and paper as the base, sun as the one accent. Unbounded is kept for the name and the headline; everything else is a fine serif over a calm sans. */
+:root{
+  --sun:#FFC91F; --night:#0B1E2D; --paper:#F7F8F6; --line:rgba(11,30,45,.16); --line-light:rgba(255,255,255,.16);
+  --display:"Unbounded","Arial Black",Arial,sans-serif; --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif; --body:"Golos Text","Helvetica Neue",Arial,sans-serif;
+  --gutter-l:max(20px,env(safe-area-inset-left,0px)); --gutter-r:max(20px,env(safe-area-inset-right,0px));
+  --band:clamp(72px,10vw,150px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html.smooth{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+[data-lenis-prevent]{overscroll-behavior:contain}
+body{margin:0;background:var(--paper);color:var(--night);font:400 17px/1.6 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--night)}
+.in{max-width:1320px;margin:0 auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+h1,h2,h3{margin:0;text-wrap:balance}
+h1{font-family:var(--display);font-size:clamp(34px,8vw,122px);font-weight:800;line-height:1.02;letter-spacing:-.045em}
+html[lang="kk"] h1{font-size:clamp(30px,7.4vw,112px)}
+h2{font-family:var(--serif);font-size:clamp(42px,6.4vw,92px);font-weight:500;line-height:1;letter-spacing:-.02em}
+h3{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;line-height:1.1;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.btn{display:inline-block;padding:16px 28px;border-radius:999px;background:var(--night);color:#fff;font-weight:500;line-height:1.1;text-decoration:none;border:0;cursor:pointer;font-size:16px;transition:background-color .2s ease,color .2s ease}
+.btn:hover{background:#17344b}
+.btn.sun{background:var(--sun);color:var(--night)}
+.btn.sun:hover{background:#ffd64f}
+.btn.outline{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+.btn.outline:hover{background:var(--sun);color:var(--night);box-shadow:inset 0 0 0 1px var(--sun)}
+.link{display:inline-flex;align-items:baseline;gap:10px;font-weight:500;text-decoration:none;padding-bottom:3px;border-bottom:1px solid currentColor}
+.link span[aria-hidden]{transition:transform .2s ease}
+.link:hover span[aria-hidden]{transform:translateX(4px)}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--night);color:#fff;transition:background-color .25s ease,box-shadow .25s ease}
+.site-head.scrolled{background:var(--paper);color:var(--night);box-shadow:0 1px 0 var(--line)}
+.head-r .btn{background:var(--sun);color:var(--night)}
+.head-r .btn:hover{background:#ffd64f}
+.scrolled .head-r .btn{background:var(--night);color:#fff}
+.scrolled .head-r .btn:hover{background:#17344b}
+.site-head .in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:16px}
+.brand{display:inline-flex;align-items:center;gap:10px;font:800 20px/1 var(--display);letter-spacing:-.04em;text-decoration:none;white-space:nowrap}
+.mark{width:30px;height:18px;flex:none}
+.site-nav{display:flex;gap:30px;font-size:15px}
+.site-nav a{text-decoration:none}
+.site-nav a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.head-r{display:flex;align-items:center;gap:20px;font-size:15px}
+.head-r a.tel{text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.head-r .btn{padding:11px 20px;font-size:15px;white-space:nowrap}
+.lang{display:flex;gap:10px}
+.lang button{font:500 13px/1 var(--body);letter-spacing:.04em;color:inherit;background:transparent;border:0;padding:6px 0;cursor:pointer;opacity:.55;border-bottom:1px solid transparent}
+.lang button[aria-pressed="true"]{opacity:1;border-bottom-color:currentColor}
+
+/* hero: the photographed neck carries the live strings */
+.hero{background:var(--night);color:#fff;padding-top:clamp(28px,3.4vw,52px)}
+.hero .in.txt{position:relative;z-index:2}
+.concept-row{display:flex;justify-content:flex-end;margin-bottom:6px}
+.concept{font-size:12px;letter-spacing:.03em;opacity:.55}
+.hero-media{position:relative;margin-top:calc(clamp(0px,7.6vw,116px)*-1);isolation:isolate;background:var(--night)}
+.hero-frame{position:relative}
+.hero-media img{display:block;width:100%;height:auto;aspect-ratio:2000/857;object-fit:cover;object-position:right center;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent)}
+.hero-media .strings{position:absolute;inset:0;width:100%;height:100%}
+.hero-media .strings path{stroke:var(--sun);stroke-width:1.25}
+.strings{display:block;width:100%;height:clamp(84px,12vw,160px);cursor:pointer;touch-action:pan-y}
+.strings path{fill:none;stroke:var(--night);stroke-width:1.25;vector-effect:non-scaling-stroke}
+.on-night .strings path,.strings.light path{stroke:var(--sun)}
+.strings.divider{height:44px}
+.strings:focus,.strings:focus-visible{outline:none}
+.strings.kbd:focus{outline:2px solid currentColor;outline-offset:-6px}
+.hint{position:absolute;left:16%;top:55%;font-size:13px;opacity:.65;pointer-events:none}
+.hero-over{position:absolute;left:0;right:0;bottom:clamp(20px,2.6vw,40px);pointer-events:none}
+.hero-foot{display:grid;grid-template-columns:auto auto;justify-content:start;gap:20px clamp(32px,4vw,64px);align-items:end;pointer-events:auto}
+.hero-foot p{font-family:var(--serif);font-weight:500;font-size:clamp(23px,2.2vw,31px);line-height:1.18;max-width:25ch}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+
+/* directions: one dark tone, the colour wakes up on hover */
+.directions{background:var(--night);color:#fff;padding-bottom:clamp(30px,4vw,60px)}
+.directions .divider{margin-top:clamp(30px,4vw,60px)}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line-light);border-block:1px solid var(--line-light)}
+.tile{display:flex;flex-direction:column;text-decoration:none;min-width:0;background:var(--night);--tint:var(--sun)}
+.pic{position:relative;display:block;overflow:hidden;background:#000;isolation:isolate}
+.pic img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;opacity:.86;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .35s ease}
+.pic::after{content:"";position:absolute;inset:0;background:var(--tint);mix-blend-mode:multiply;opacity:0;transition:opacity .35s ease}
+.tile:hover .pic img{transform:scale(1.03);opacity:1}
+.tile:hover .pic::after{opacity:1}
+.tile-text{flex:1;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;padding:clamp(20px,2.2vw,30px) clamp(20px,2.2vw,30px) clamp(24px,2.6vw,36px);align-items:start}
+.tile h3{overflow-wrap:anywhere}
+.tile p{grid-column:1;font-size:15px;line-height:1.5;opacity:.72;max-width:36ch}
+.tile .go{grid-column:2;grid-row:1;font-size:20px;line-height:1.4;transition:transform .2s ease,color .2s ease}
+.tile:hover .go{transform:translateX(5px);color:var(--sun)}
+.band-head{padding-block:var(--band) clamp(36px,5vw,72px)}
+.band-head p{max-width:46ch;margin-top:18px;font-size:clamp(17px,1.4vw,19px);opacity:.75}
+
+/* who: the one bright moment after the first screen */
+.who{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.who>div{padding:clamp(56px,7vw,110px) max(20px,5vw);display:flex;flex-direction:column;align-items:flex-start;gap:20px;min-width:0}
+.who h2{font-size:clamp(40px,5vw,72px)}
+.who p{max-width:40ch}
+.who .kids{background:var(--sun)}
+.who .adults{background:var(--paper)}
+
+/* prices */
+.prices{padding-block:clamp(24px,3vw,44px) var(--band)}
+.prices .band-head{padding-top:clamp(40px,6vw,90px)}
+.price-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.price-table th{font:400 13px/1.3 var(--body);letter-spacing:.02em;text-align:left;padding:0 24px 14px 0;border-bottom:1px solid var(--night);opacity:.7}
+.price-table td{padding:26px 24px 26px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.price-table .fmt{font:500 clamp(25px,2.5vw,34px)/1.1 var(--serif);display:block}
+.price-table .inc{display:block;font-size:14px;line-height:1.45;margin-top:6px;max-width:42ch;opacity:.65}
+.price-table .amt{font:400 clamp(17px,1.5vw,20px)/1.3 var(--body);white-space:nowrap}
+.price-table small{display:block;font-size:13px;margin-top:2px;opacity:.6}
+.price-table a{text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* teachers */
+.teachers{background:var(--night);color:#fff;padding-bottom:var(--band)}
+.t-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,44px)}
+.t-card{min-width:0}
+.t-card .ph{aspect-ratio:4/5;display:grid;place-items:center;background:rgba(255,255,255,.045);color:rgba(255,255,255,.55);text-align:center;padding:16px;font-size:13px}
+.t-card h3{margin-top:18px}
+.t-card p{font-size:14px;opacity:.65;margin-top:4px}
+
+/* signup */
+.signup{padding-bottom:var(--band)}
+.signup .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px clamp(28px,6vw,90px);align-items:start}
+.signup .note{font-family:var(--serif);font-weight:500;font-size:clamp(24px,2.3vw,32px);line-height:1.2;max-width:24ch}
+form{display:grid;gap:22px;min-width:0}
+label,.field{display:grid;gap:4px;min-width:0;font-weight:400;font-size:13px;letter-spacing:.02em}
+.field .lbl{opacity:.75}
+input{font:400 18px/1.3 var(--body);color:var(--night);padding:12px 0;border:0;border-bottom:1px solid var(--night);border-radius:0;background:transparent;width:100%;min-width:0;letter-spacing:0}
+input::placeholder{color:rgba(11,30,45,.45)}
+input:focus{outline:none;box-shadow:0 1px 0 var(--night)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.dd{position:relative;min-width:0}
+.dd-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;font:400 18px/1.3 var(--body);color:var(--night);text-align:left;padding:12px 0;border:0;border-bottom:1px solid var(--night);border-radius:0;background:transparent;cursor:pointer}
+.dd-btn span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.dd-btn svg{flex:none;width:12px;height:8px;transition:transform .2s ease}
+.dd-btn svg path{stroke-width:1.5}
+.dd-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.dd-btn:focus-visible{outline:none;box-shadow:0 1px 0 var(--night)}
+.dd-list{position:absolute;z-index:15;top:calc(100% + 8px);left:0;right:0;margin:0;padding:6px;list-style:none;background:var(--night);color:#fff;border-radius:4px;max-height:300px;overflow:auto;box-shadow:0 18px 40px rgba(11,30,45,.28)}
+.dd-list li{padding:10px 12px;border-radius:2px;cursor:pointer;font-size:16px;line-height:1.25;letter-spacing:0}
+.dd-list li.active{background:rgba(255,255,255,.12)}
+.dd-list li[aria-selected="true"]{color:var(--sun)}
+.err{font-size:14px;margin:0}
+.fine{font-size:13px;margin:0;opacity:.6}
+form .btn{justify-self:start;text-align:center;margin-top:6px}
+
+/* contacts */
+.contacts{background:var(--night);color:#fff;padding-block:var(--band) 26px}
+.c-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.c-grid .lbl{font-size:13px;opacity:.6;margin-bottom:8px}
+.c-grid .val{font:500 clamp(23px,2.2vw,30px)/1.2 var(--serif);font-variant-numeric:lining-nums;overflow-wrap:anywhere}
+.c-grid a{text-decoration-thickness:1px;text-underline-offset:5px}
+.c-grid .sub{font-size:14px;margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.contacts .strings{margin-top:clamp(40px,5vw,72px)}
+.wordmark{font:800 clamp(52px,14.5vw,216px)/.9 var(--display);letter-spacing:-.06em;color:#fff;white-space:nowrap}
+.foot{display:flex;flex-wrap:wrap;gap:12px 18px;justify-content:space-between;align-items:center;font-size:13px;padding-top:22px}
+.foot .btn{padding:11px 20px;font-size:14px}
+
+/* tile cursor: a small label over the photos, nowhere else */
+.has-tile-cursor .pic{cursor:none}
+.tile-cursor{position:fixed;left:0;top:0;z-index:15;width:0;height:0;pointer-events:none;will-change:transform}
+.tile-cursor span{position:absolute;left:-46px;top:-46px;width:92px;height:92px;display:grid;place-items:center;border-radius:50%;background:var(--sun);color:var(--night);font-size:13px;font-weight:500;opacity:0;transform:scale(.6);transition:opacity .2s ease,transform .25s cubic-bezier(.2,.7,.2,1)}
+.tile-cursor.on span{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.tile-cursor span{transition:none}}
+
+/* quiet reveal: blocks are always readable, they only settle into place */
+.reveal{opacity:.35;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.shown{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .btn,.link span[aria-hidden],.pic img,.pic::after,.tile .go,.dd-btn svg,.site-head{transition:none}
+  .tile:hover .pic img{transform:none}
+  .tile:hover .go{transform:none}
+}
+@media (max-width:1020px){
+  .site-nav{display:none}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tiles .tile:last-child{grid-column:1/-1}
+}
+@media (max-width:900px){
+  .hero-media{margin-top:12px}
+  .hero-media img{aspect-ratio:3/2}
+  .hint{left:var(--gutter-l);top:56%}
+  .hero-over{position:static;padding-top:6px;padding-bottom:40px}
+  .hero-foot{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .head-r a.tel{display:none}
+  .who,.signup .grid,.c-grid{grid-template-columns:minmax(0,1fr)}
+  .t-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .t-grid .t-card:last-child{grid-column:1/-1;max-width:calc(50% - 9px)}
+  .price-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .price-table,.price-table tbody,.price-table tr,.price-table td{display:block;width:100%}
+  .price-table tr{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px}
+  .price-table tr:first-child{border-top:1px solid var(--night)}
+  .price-table td{padding:0;border:0}
+  .price-table td:first-child{grid-column:1/-1}
+  .tile-text{padding:16px 16px 22px}
+  .tile h3{font-size:clamp(22px,6vw,30px)}
+  .tile p{font-size:14px}
+  .tile .go{font-size:17px}
+  .tiles .tile:last-child .pic img{aspect-ratio:2/1}
+}
+@media (max-width:420px){
+  .two{grid-template-columns:minmax(0,1fr)}
+  .site-head .in{gap:10px}
+  .head-r{gap:12px}
+  .brand{font-size:16px}
+  .head-r .btn{padding:10px 14px;font-size:14px}
+  .price-table .amt{white-space:normal}
+}
+@media (max-width:370px){.head-r .btn{display:none}}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="in">
+    <a class="brand" href="#top" aria-label="Soul Live"><svg class="mark" viewBox="0 0 26 16" aria-hidden="true"><path d="M1 6.6H25M1 9.4H25" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M12.5 8C15 3.4 19 1 25 1v14c-6 0-10-2.4-12.5-7z" stroke="currentColor" stroke-width="1.2" fill="none"/></svg><span>Soul Live</span></a>
+    <nav class="site-nav" aria-label="Разделы">
+      <a href="#directions">Направления</a><a href="#prices">Цены</a><a href="#teachers">Преподаватели</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="head-r">
+      <a class="tel" href="tel:+77055904160">+7 705 590 4160</a>
+      <div class="lang" role="group" aria-label="Язык / Тіл"><button type="button" data-lang="ru" lang="ru" aria-pressed="true">РУС</button><button type="button" data-lang="kk" lang="kk" aria-pressed="false">ҚАЗ</button></div>
+      <a class="btn" href="#signup">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero on-night">
+    <div class="in concept-row"><span class="concept">Концепт сайта</span></div>
+    <div class="in txt"><h1>От домбры<br>до саксофона</h1></div>
+    <div class="hero-media">
+      <div class="hero-frame">
+      <img src="img/hero.jpg" alt="" width="2000" height="857" fetchpriority="high" decoding="async">
+      <svg class="strings" data-strings data-ys="56.4,59.2" data-scale="0.3" data-reach="9" viewBox="0 0 1000 120" preserveAspectRatio="none" role="button" tabindex="0" aria-label="Две струны домбры: нажмите, чтобы услышать звук"></svg>
+      <span class="hint">Нажмите на струну, она звучит</span>
+      </div>
+      <div class="in hero-over">
+        <div class="hero-foot">
+          <p>Музыкальная школа-студия в Алматы для детей и взрослых. Можно начать с нуля.</p>
+          <div class="hero-actions">
+            <a class="btn sun" href="#signup">Записаться на занятие</a>
+            <a class="link" href="#prices"><span>Посмотреть цены</span><span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="directions on-night" id="directions">
+    <div class="in band-head reveal">
+      <h2>Девять направлений</h2>
+      <p>Шесть инструментов, вокал, сольфеджио и актёрское мастерство. Выберите, что откликается.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile reveal" href="#signup" data-pick="Домбра"><span class="pic"><img src="img/dombra.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Домбра</h3><span class="go" aria-hidden="true">→</span><p>Две струны и большая традиция. Индивидуально и в ансамбле.</p></div></a>
+      <a class="tile reveal" href="#signup" data-pick="Фортепиано"><span class="pic"><img src="img/piano.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Фортепиано</h3><span class="go" aria-hidden="true">→</span><p>Универсальный инструмент: от первых мелодий до большого репертуара.</p></div></a>
+      <a class="tile reveal" style="--tint:#FF7A59" href="#signup" data-pick="Вокал"><span class="pic"><img src="img/voice.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Вокал</h3><span class="go" aria-hidden="true">→</span><p>Дыхание, слух, речь и чувство ритма. Индивидуально и в группе.</p></div></a>
+      <a class="tile reveal" style="--tint:#FF7A59" href="#signup" data-pick="Скрипка"><span class="pic"><img src="img/violin.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Скрипка</h3><span class="go" aria-hidden="true">→</span><p>Кажется недостижимой, но играть на ней может каждый.</p></div></a>
+      <a class="tile reveal" href="#signup" data-pick="Гитара"><span class="pic"><img src="img/guitar.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Гитара</h3><span class="go" aria-hidden="true">→</span><p>От аккомпанемента до соло: блюз, фламенко, рок.</p></div></a>
+      <a class="tile reveal" style="--tint:#10B4D2" href="#signup" data-pick="Флейта"><span class="pic"><img src="img/flute.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Флейта</h3><span class="go" aria-hidden="true">→</span><p>Высокий и гармоничный звук. Индивидуальные занятия.</p></div></a>
+      <a class="tile reveal" href="#signup" data-pick="Саксофон"><span class="pic"><img src="img/sax.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Саксофон</h3><span class="go" aria-hidden="true">→</span><p>Яркий духовой инструмент, который появился в 1840-х годах.</p></div></a>
+      <a class="tile reveal" href="#signup" data-pick="Сольфеджио"><span class="pic"><img src="img/fork.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Сольфеджио</h3><span class="go" aria-hidden="true">→</span><p>Слух и ноты для всех направлений. Занятия в группе.</p></div></a>
+      <a class="tile reveal" style="--tint:#FF7A59" href="#signup" data-pick="Актёрское мастерство"><span class="pic"><img src="img/light.jpg" alt="" width="1000" height="672" decoding="async"></span><div class="tile-text"><h3>Актёрское мастерство</h3><span class="go" aria-hidden="true">→</span><p>Уверенность, красивая речь и публичные выступления.</p></div></a>
+    </div>
+    <svg class="strings divider" data-strings viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"></svg>
+  </section>
+
+  <section class="who" aria-label="Для кого">
+    <div class="kids">
+      <h2>Детям</h2>
+      <p>В детской группе музыка развивает речь, слух, память, мышление и координацию движений.</p>
+      <a class="link" href="#signup" data-pick="Детская группа" data-who="Ребёнок"><span>Детская группа</span><span aria-hidden="true">→</span></a>
+    </div>
+    <div class="adults">
+      <h2>Взрослым</h2>
+      <p>Хотите вернуться к давней мечте или никогда не занимались музыкой? Начнём с того уровня, который есть сейчас.</p>
+      <a class="link" href="#signup" data-who="Взрослый"><span>Начать заниматься</span><span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="prices" id="prices">
+    <svg class="strings divider" data-strings viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="in">
+      <div class="band-head reveal"><h2>Цены</h2><p>Одно занятие длится 45 минут. Можно прийти на отдельное занятие или взять абонемент.</p></div>
+      <table class="price-table">
+        <thead><tr><th scope="col">Формат</th><th scope="col">Одно занятие</th><th scope="col">Абонемент</th></tr></thead>
+        <tbody>
+          <tr><td><span class="fmt">Индивидуально</span><span class="inc">Фортепиано, саксофон, флейта, гитара, домбра, скрипка, вокал</span></td><td><span class="amt">от 6 000 ₸</span><small>45 минут</small></td><td><span class="amt">от 50 000 ₸</span><small>8 занятий</small></td></tr>
+          <tr><td><span class="fmt">Группы и ансамбли</span><span class="inc">Домбра, гитара, вокал, скрипка</span></td><td><span class="amt">от 3 500 ₸</span><small>45 минут</small></td><td><span class="amt">от 12 000 ₸</span><small>4 занятия</small></td></tr>
+          <tr><td><span class="fmt">Детская группа</span><span class="inc">Музыкальные занятия для детей</span></td><td><span class="amt">от 3 500 ₸</span><small>45 минут</small></td><td><span class="amt">от 12 000 ₸</span><small>4 занятия</small></td></tr>
+          <tr><td><span class="fmt">Сольфеджио</span><span class="inc">Группа, для всех направлений</span></td><td><span class="amt">от 3 000 ₸</span><small>45 минут</small></td><td><span class="amt">от 10 000 ₸</span><small>4 занятия</small></td></tr>
+          <tr><td><span class="fmt">Актёрское мастерство</span><span class="inc">В группе и индивидуально</span></td><td colspan="2"><a href="#signup" data-pick="Актёрское мастерство">Уточнить стоимость</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="teachers on-night" id="teachers">
+    <div class="in">
+      <div class="band-head reveal"><h2>Преподаватели</h2><p>Кто будет заниматься с вами.</p></div>
+      <!-- ЗАПОЛНИТЬ: настоящие портреты, имена и инструменты. Сайт нельзя запускать с этими заглушками. -->
+      <div class="t-grid">
+        <article class="t-card reveal"><div class="ph">Портрет преподавателя</div><h3>Имя Фамилия</h3><p>Инструмент, опыт одной строкой</p></article>
+        <article class="t-card reveal"><div class="ph">Портрет преподавателя</div><h3>Имя Фамилия</h3><p>Инструмент, опыт одной строкой</p></article>
+        <article class="t-card reveal"><div class="ph">Портрет преподавателя</div><h3>Имя Фамилия</h3><p>Инструмент, опыт одной строкой</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="signup" id="signup">
+    <div class="in">
+      <div class="band-head reveal"><h2>Запишитесь за минуту</h2></div>
+      <div class="grid">
+        <div>
+          <p class="note">Заполните форму, и откроется WhatsApp с готовым сообщением школе. Останется нажать «Отправить».</p>
+        </div>
+        <form id="signup-form" novalidate>
+          <label for="f-name">Как вас зовут<input id="f-name" name="name" type="text" autocomplete="name" placeholder="Имя"></label>
+          <div class="two">
+            <div class="field"><span class="lbl" id="l-who">Кто будет заниматься</span><select id="f-who" name="who" aria-labelledby="l-who"><option>Взрослый</option><option>Ребёнок</option></select></div>
+            <div class="field"><span class="lbl" id="l-dir">Направление</span><select id="f-dir" name="dir" aria-labelledby="l-dir">
+              <option>Нужен совет</option><option>Домбра</option><option>Фортепиано</option><option>Вокал</option><option>Скрипка</option><option>Гитара</option><option>Флейта</option><option>Саксофон</option><option>Сольфеджио</option><option>Актёрское мастерство</option><option>Детская группа</option>
+            </select></div>
+          </div>
+          <p class="err" id="f-err" role="alert" hidden>Напишите имя, чтобы школа знала, как к вам обратиться.</p>
+          <a class="btn" id="wa-link" href="https://wa.me/77055904160" target="_blank" rel="noopener">Открыть WhatsApp</a>
+          <p class="fine">Сайт ничего не сохраняет. Сообщение отправляете вы сами.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contacts on-night" id="contacts">
+  <div class="in">
+    <div class="c-grid">
+      <div><p class="lbl">Адрес</p><p class="val">Алматы, Медеуский район, улица Тулебаева, 194</p><p class="sub"><a href="https://2gis.kz/almaty/search/%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%20194" target="_blank" rel="noopener">Открыть в 2ГИС</a><a href="https://www.google.com/maps/search/?api=1&query=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C%20%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%20194" target="_blank" rel="noopener">Google Maps</a></p></div>
+      <div><p class="lbl">Телефон и WhatsApp</p><p class="val"><a href="tel:+77055904160">+7 705 590 4160</a></p></div>
+      <div><p class="lbl">Почта и соцсети</p><p class="val"><a href="mailto:soullivestudio@gmail.com">soullivestudio@gmail.com</a></p><p class="sub"><a href="https://instagram.com/soul.livestudio" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@soullivestudio" target="_blank" rel="noopener">YouTube</a></p></div>
+    </div>
+  </div>
+  <svg class="strings light" data-strings viewBox="0 0 1000 120" preserveAspectRatio="none" role="button" tabindex="0" aria-label="Две струны домбры: нажмите, чтобы услышать звук"></svg>
+  <div class="in">
+    <div class="wordmark" aria-hidden="true">Soul Live</div>
+    <div class="foot"><span>Soul Live Studio, Алматы</span><a class="btn outline" href="#top"><span>Наверх</span> <span aria-hidden="true">↑</span></a></div>
+  </div>
+</footer>
+
+<div class="tile-cursor" id="tile-cursor" aria-hidden="true" hidden><span>Записаться</span></div>
+<script src="vendor/lenis.min.js"></script>
+<script>
+(function(){
+  var NOTES=[146.83,196]; // dombra open strings, D3 and G3
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ctx=null;
+
+  // Karplus-Strong pluck; plays only after a click or key press
+  function sound(freq){
+    try{
+      ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+      if(ctx.state==='suspended') ctx.resume();
+      var sr=ctx.sampleRate,len=Math.floor(sr*1.5),n=Math.round(sr/freq);
+      var buf=ctx.createBuffer(1,len,sr),d=buf.getChannelData(0),i;
+      for(i=0;i<n;i++) d[i]=Math.random()*2-1;
+      for(i=n;i<len;i++) d[i]=0.4975*(d[i-n]+d[i-n-1>=0?i-n-1:0]);
+      var s=ctx.createBufferSource(),g=ctx.createGain();
+      g.gain.value=.22; s.buffer=buf; s.connect(g); g.connect(ctx.destination); s.start();
+    }catch(e){}
+  }
+
+  document.querySelectorAll('[data-strings]').forEach(function(svg){
+    var ys=(svg.dataset.ys||'44,78').split(',').map(Number),scale=Number(svg.dataset.scale||1),reach=Number(svg.dataset.reach||22);
+    var strings=ys.map(function(y,i){
+      var p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('d','M0 '+y+' L1000 '+y); svg.appendChild(p);
+      return {el:p,y:y,amp:0,x:500,note:NOTES[i],phase:i};
+    });
+    var t=0,running=false;
+    // Slow, time-based sway: the same speed on 60 and 120 Hz screens, the swing eases in and fades out
+    var last=0;
+    function frame(now){
+      var dt=last?Math.min(2.5,(now-last)/16.67):1,alive=false; last=now;
+      t+=dt;
+      strings.forEach(function(s,i){
+        s.target=(s.target||0)*Math.pow(.982,dt);
+        s.amp+=(s.target-s.amp)*(1-Math.pow(.9,dt));
+        s.x+=((s.tx==null?s.x:s.tx)-s.x)*(1-Math.pow(.94,dt));
+        if(s.target>.1*scale||s.amp>.1*scale) alive=true; else {s.amp=0;s.target=0;}
+        var off=s.amp*Math.sin(t*(.13+i*.018));
+        s.el.setAttribute('d','M0 '+s.y+' Q'+s.x+' '+(s.y+off*2)+' 1000 '+s.y);
+      });
+      if(!alive) last=0;
+      if(alive) requestAnimationFrame(frame); else running=false;
+    }
+    function kick(s,x,power){
+      if(s.amp<.2*scale) s.x=x;
+      s.tx=x; s.target=Math.max(s.target||0,power*scale);
+      if(!reduce&&!running){running=true;requestAnimationFrame(frame);}
+    }
+    if(svg.closest('.hero')) setTimeout(function(){ kick(strings[0],420,4); setTimeout(function(){kick(strings[1],620,3);},400); },800);
+    function nearest(e){
+      var r=svg.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*1000,y=(e.clientY-r.top)/r.height*120;
+      var s=Math.abs(y-strings[0].y)<Math.abs(y-strings[1].y)?strings[0]:strings[1];
+      return {s:s,x:x,dist:Math.abs(y-s.y)};
+    }
+    var touching=null;
+    svg.addEventListener('pointerleave',function(){touching=null;});
+    svg.addEventListener('pointermove',function(e){
+      if(e.pointerType==='touch') return;
+      // A gentle touch once per pass over a string, not on every mouse move
+      var n=nearest(e),over=n.dist<reach?n.s:null;
+      if(over&&over!==touching) kick(over,n.x,5);
+      touching=over;
+    });
+    svg.addEventListener('pointerdown',function(e){
+      var n=nearest(e); if(n.dist>=reach*2) return; kick(n.s,n.x,12); sound(n.s.note);
+    });
+    // Focus ring only for keyboard users; a mouse click must not draw a box around the strings
+    svg.addEventListener('keyup',function(e){ if(e.key==='Tab') svg.classList.add('kbd'); });
+    svg.addEventListener('blur',function(){ svg.classList.remove('kbd'); });
+    svg.addEventListener('keydown',function(e){
+      if(e.key!=='Enter'&&e.key!==' ') return;
+      e.preventDefault();
+      strings.forEach(function(s,i){ kick(s,500,12); setTimeout(function(){sound(s.note);},i*140); });
+    });
+  });
+
+  // Header turns from sky to paper once the first screen is left
+  var head=document.querySelector('.site-head'),hero=document.querySelector('.hero');
+  function onScroll(){ head.classList.toggle('scrolled',window.scrollY>hero.offsetHeight-head.offsetHeight); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // Blocks settle into place as they enter the screen
+  var rev=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){
+    rev.forEach(function(el){el.classList.add('shown');});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('shown');io.unobserve(e.target);} });
+    },{rootMargin:'0px 0px -6% 0px'});
+    rev.forEach(function(el){io.observe(el);});
+  }
+
+  // Smooth wheel scrolling on computers only; phones keep their native scroll
+  if(window.Lenis&&!reduce&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.documentElement.classList.add('smooth');
+    var lenis=new Lenis({lerp:.11,wheelMultiplier:1});
+    (function loop(time){ lenis.raf(time); requestAnimationFrame(loop); })(performance.now());
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href').slice(1);
+        var el=id==='top'?0:document.getElementById(id);
+        if(el===null) return;
+        e.preventDefault();
+        lenis.scrollTo(el,{offset:el===0?0:-head.offsetHeight});
+        try{ history.pushState(null,'','#'+id); }catch(err){}
+      });
+    });
+  }
+
+  // Label cursor over tile photos; runs only while a photo is under the pointer
+  var cur=document.getElementById('tile-cursor');
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.documentElement.classList.add('has-tile-cursor');
+    cur.hidden=false;
+    var mx=0,my=0,cx=0,cy=0,curOn=false,curRun=false,curLast=0;
+    var curPlace=function(){ cur.style.transform='translate('+cx+'px,'+cy+'px)'; };
+    var curFrame=function(now){
+      var dt=curLast?Math.min(2.5,(now-curLast)/16.67):1,k=reduce?1:1-Math.pow(.72,dt); curLast=now;
+      cx+=(mx-cx)*k; cy+=(my-cy)*k; curPlace();
+      if(curOn||Math.abs(mx-cx)+Math.abs(my-cy)>.5) requestAnimationFrame(curFrame);
+      else {curRun=false;curLast=0;}
+    };
+    var curShow=function(){
+      if(!curOn){ curOn=true; cx=mx; cy=my; curPlace(); cur.classList.add('on'); }
+      if(!curRun){ curRun=true; requestAnimationFrame(curFrame); }
+    };
+    var curHide=function(){ curOn=false; cur.classList.remove('on'); };
+    document.querySelectorAll('.tile .pic').forEach(function(pic){
+      pic.addEventListener('pointerenter',function(e){ mx=e.clientX; my=e.clientY; curShow(); });
+      pic.addEventListener('pointermove',function(e){ mx=e.clientX; my=e.clientY; });
+      pic.addEventListener('pointerleave',curHide);
+    });
+    // Scrolling can carry the photo away from a still pointer
+    window.addEventListener('scroll',function(){
+      if(!curOn) return;
+      var el=document.elementFromPoint(mx,my);
+      if(!el||!el.closest('.tile .pic')) curHide();
+    },{passive:true});
+  }
+
+  // Form builds a WhatsApp link with a ready message; nothing is stored or sent by the site
+  var name=document.getElementById('f-name'),who=document.getElementById('f-who'),dir=document.getElementById('f-dir');
+  var link=document.getElementById('wa-link'),err=document.getElementById('f-err');
+  var lang='ru',dropdowns=[];
+  function picked(sel){ return sel.options[sel.selectedIndex].text; }
+
+  // Styled dropdown over the native select, which stays the source of the value
+  function makeDropdown(sel){
+    var wrap=document.createElement('div'),btn=document.createElement('button'),label=document.createElement('span'),list=document.createElement('ul');
+    var labelId=sel.getAttribute('aria-labelledby'),active=0;
+    wrap.className='dd';
+    btn.type='button'; btn.className='dd-btn'; btn.setAttribute('aria-haspopup','listbox'); btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-labelledby',labelId+' '+sel.id+'-val'); label.id=sel.id+'-val';
+    btn.appendChild(label);
+    btn.insertAdjacentHTML('beforeend','<svg viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>');
+    list.className='dd-list'; list.id=sel.id+'-list'; list.setAttribute('role','listbox'); list.setAttribute('data-lenis-prevent',''); list.setAttribute('aria-labelledby',labelId); list.hidden=true;
+    btn.setAttribute('aria-controls',list.id);
+    var items=[].map.call(sel.options,function(o,i){
+      var li=document.createElement('li'); li.setAttribute('role','option');
+      li.addEventListener('click',function(){choose(i);});
+      li.addEventListener('mousemove',function(){mark(i);});
+      list.appendChild(li); return li;
+    });
+    sel.parentNode.insertBefore(wrap,sel); wrap.appendChild(btn); wrap.appendChild(list); wrap.appendChild(sel);
+    sel.hidden=true;
+    function mark(i){ active=i; items.forEach(function(li,k){li.classList.toggle('active',k===i);}); }
+    function sync(){
+      label.textContent=picked(sel);
+      items.forEach(function(li,i){ li.textContent=sel.options[i].text; li.setAttribute('aria-selected',String(i===sel.selectedIndex)); });
+    }
+    function open(){
+      dropdowns.forEach(function(d){d.close();});
+      list.hidden=false; btn.setAttribute('aria-expanded','true'); mark(sel.selectedIndex); items[active].scrollIntoView({block:'nearest'});
+    }
+    function close(){ list.hidden=true; btn.setAttribute('aria-expanded','false'); }
+    function choose(i){ sel.selectedIndex=i; sel.dispatchEvent(new Event('change')); close(); btn.focus(); }
+    btn.addEventListener('click',function(){ if(list.hidden) open(); else close(); });
+    btn.addEventListener('keydown',function(e){
+      var isOpen=!list.hidden;
+      if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+        e.preventDefault();
+        if(!isOpen){open();return;}
+        mark((active+(e.key==='ArrowDown'?1:-1)+items.length)%items.length); items[active].scrollIntoView({block:'nearest'});
+      }else if((e.key==='Enter'||e.key===' ')&&isOpen){ e.preventDefault(); choose(active); }
+      else if(e.key==='Escape'&&isOpen){ e.preventDefault(); close(); }
+      else if(e.key==='Tab'){ close(); }
+    });
+    document.addEventListener('click',function(e){ if(!wrap.contains(e.target)) close(); });
+    dropdowns.push({sync:sync,close:close});
+  }
+
+  function update(){
+    dropdowns.forEach(function(d){d.sync();});
+    var n=name.value.trim(),msg=lang==='kk'
+      ?'Сәлеметсіз бе! Менің атым '+n+'. Soul Live мектебіне жазылғым келеді.\nКім оқиды: '+picked(who)+'\nБағыт: '+picked(dir)
+      :'Здравствуйте! Меня зовут '+n+'. Хочу записаться в Soul Live.\nКто будет заниматься: '+picked(who)+'\nНаправление: '+picked(dir);
+    link.href='https://wa.me/77055904160?text='+encodeURIComponent(msg);
+    if(name.value.trim()) err.hidden=true;
+  }
+  [name,who,dir].forEach(function(el){el.addEventListener('input',update);el.addEventListener('change',update);});
+  link.addEventListener('click',function(e){
+    if(!name.value.trim()){e.preventDefault();err.hidden=false;name.focus();}
+  });
+  document.getElementById('signup-form').addEventListener('submit',function(e){e.preventDefault();link.click();});
+  document.querySelectorAll('[data-pick],[data-who]').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(a.dataset.pick) dir.value=a.dataset.pick;
+      if(a.dataset.who) who.value=a.dataset.who;
+      update();
+    });
+  });
+
+  // Kazakh translation, keyed by the Russian text in the markup
+  var KK={
+    'Направления':'Бағыттар','Цены':'Бағалар','Преподаватели':'Ұстаздар','Контакты':'Байланыс','Записаться':'Жазылу',
+    'От домбры':'Домбырадан','до саксофона':'саксофонға дейін',
+    'Нажмите на струну, она звучит':'Ішекті басыңыз, ол дыбыс шығарады',
+    'Музыкальная школа-студия в Алматы для детей и взрослых. Можно начать с нуля.':'Алматыдағы балалар мен ересектерге арналған музыка мектеп-студиясы. Нөлден бастауға болады.',
+    'Записаться на занятие':'Сабаққа жазылу','Посмотреть цены':'Бағаларды көру',
+    'Девять направлений':'Тоғыз бағыт',
+    'Шесть инструментов, вокал, сольфеджио и актёрское мастерство. Выберите, что откликается.':'Алты аспап, вокал, сольфеджио және актёрлік шеберлік. Өзіңізге ұнағанын таңдаңыз.',
+    'Домбра':'Домбыра','Актёрское мастерство':'Актёрлік шеберлік',
+    'Две струны и большая традиция. Индивидуально и в ансамбле.':'Екі ішек және үлкен дәстүр. Жеке және ансамбльде.',
+    'Универсальный инструмент: от первых мелодий до большого репертуара.':'Әмбебап аспап: алғашқы әуендерден үлкен репертуарға дейін.',
+    'Дыхание, слух, речь и чувство ритма. Индивидуально и в группе.':'Тыныс, есту қабілеті, сөйлеу және ырғақ сезімі. Жеке және топта.',
+    'Кажется недостижимой, но играть на ней может каждый.':'Қол жетпестей көрінеді, бірақ онда кез келген адам ойнай алады.',
+    'От аккомпанемента до соло: блюз, фламенко, рок.':'Сүйемелдеуден сольға дейін: блюз, фламенко, рок.',
+    'Высокий и гармоничный звук. Индивидуальные занятия.':'Биік әрі үйлесімді дыбыс. Жеке сабақтар.',
+    'Яркий духовой инструмент, который появился в 1840-х годах.':'1840 жылдары пайда болған жарқын үрлемелі аспап.',
+    'Слух и ноты для всех направлений. Занятия в группе.':'Барлық бағытқа арналған есту қабілеті мен ноталар. Топтық сабақтар.',
+    'Уверенность, красивая речь и публичные выступления.':'Сенімділік, әдемі сөйлеу және көпшілік алдында өнер көрсету.',
+    'Детям':'Балаларға','Детская группа':'Балалар тобы',
+    'В детской группе музыка развивает речь, слух, память, мышление и координацию движений.':'Балалар тобында музыка сөйлеуді, есту қабілетін, жадыны, ойлауды және қимыл үйлесімін дамытады.',
+    'Взрослым':'Ересектерге','Начать заниматься':'Сабақты бастау',
+    'Хотите вернуться к давней мечте или никогда не занимались музыкой? Начнём с того уровня, который есть сейчас.':'Көптен бергі арманыңызға оралғыңыз келе ме, әлде музыкамен мүлде айналыспадыңыз ба? Қазіргі деңгейіңізден бастаймыз.',
+    'Одно занятие длится 45 минут. Можно прийти на отдельное занятие или взять абонемент.':'Бір сабақ 45 минутқа созылады. Бір реттік сабаққа келуге немесе абонемент алуға болады.',
+    'Формат':'Формат','Одно занятие':'Бір сабақ','Абонемент':'Абонемент',
+    'Индивидуально':'Жеке сабақ','Фортепиано, саксофон, флейта, гитара, домбра, скрипка, вокал':'Фортепиано, саксофон, флейта, гитара, домбыра, скрипка, вокал',
+    '45 минут':'45 минут','8 занятий':'8 сабақ','4 занятия':'4 сабақ',
+    'от 6 000 ₸':'6 000 ₸ бастап','от 50 000 ₸':'50 000 ₸ бастап','от 3 500 ₸':'3 500 ₸ бастап','от 12 000 ₸':'12 000 ₸ бастап','от 3 000 ₸':'3 000 ₸ бастап','от 10 000 ₸':'10 000 ₸ бастап',
+    'Группы и ансамбли':'Топтар мен ансамбльдер','Домбра, гитара, вокал, скрипка':'Домбыра, гитара, вокал, скрипка',
+    'Музыкальные занятия для детей':'Балаларға арналған музыка сабақтары',
+    'Группа, для всех направлений':'Топтық, барлық бағытқа арналған',
+    'В группе и индивидуально':'Топта және жеке','Уточнить стоимость':'Бағасын нақтылау',
+    'Кто будет заниматься с вами.':'Сізбен кім сабақ өткізеді.',
+    'Портрет преподавателя':'Ұстаздың портреті','Имя Фамилия':'Аты-жөні','Инструмент, опыт одной строкой':'Аспабы, тәжірибесі бір жолда',
+    'Запишитесь за минуту':'Бір минутта жазылыңыз',
+    'Заполните форму, и откроется WhatsApp с готовым сообщением школе. Останется нажать «Отправить».':'Форманы толтырыңыз, сонда WhatsApp мектепке дайын хабарламамен ашылады. «Жіберу» түймесін басу ғана қалады.',
+    'Как вас зовут':'Атыңыз кім','Кто будет заниматься':'Кім оқиды','Направление':'Бағыт',
+    'Взрослый':'Ересек','Ребёнок':'Бала','Нужен совет':'Кеңес керек',
+    'Напишите имя, чтобы школа знала, как к вам обратиться.':'Мектеп сізге қалай хабарласатынын білуі үшін атыңызды жазыңыз.',
+    'Открыть WhatsApp':'WhatsApp ашу','Сайт ничего не сохраняет. Сообщение отправляете вы сами.':'Сайт ештеңе сақтамайды. Хабарламаны өзіңіз жібересіз.',
+    'Адрес':'Мекенжай','Алматы, Медеуский район, улица Тулебаева, 194':'Алматы, Медеу ауданы, Төлебаев көшесі, 194',
+    'Открыть в 2ГИС':'2ГИС-те ашу','Телефон и WhatsApp':'Телефон және WhatsApp','Почта и соцсети':'Пошта және әлеуметтік желілер',
+    'Soul Live Studio, Алматы':'Soul Live Studio, Алматы','Наверх':'Жоғары','Концепт сайта':'Сайт концепті',
+    // attributes and head
+    'Имя':'Атыңыз','Две струны домбры: нажмите, чтобы услышать звук':'Домбыраның екі ішегі: дыбысын есту үшін басыңыз',
+    'Разделы':'Бөлімдер','Для кого':'Кімге арналған',
+    'Soul Live: музыкальная школа в Алматы для детей и взрослых':'Soul Live: Алматыдағы балалар мен ересектерге арналған музыка мектебі'
+  };
+  // Option values stay Russian so data-pick keeps working in both languages
+  document.querySelectorAll('option').forEach(function(o){o.value=o.text;});
+  makeDropdown(who); makeDropdown(dir);
+  var nodes=[],walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  while(walk.nextNode()){
+    var tn=walk.currentNode,tag=tn.parentNode.nodeName,key=tn.nodeValue.trim();
+    if(key&&tag!=='SCRIPT'&&tag!=='STYLE'&&KK[key]) nodes.push({n:tn,ru:key});
+  }
+  var attrs=[];
+  document.querySelectorAll('[placeholder],[aria-label]').forEach(function(el){
+    ['placeholder','aria-label'].forEach(function(a){ var v=el.getAttribute(a); if(v&&KK[v]) attrs.push({el:el,a:a,ru:v}); });
+  });
+  function typo(s){
+    for(var i=0;i<2;i++) s=s.replace(/(^|[\s «])(в|и|с|к|у|о|а|на|по|до|от|за|из|не|но|или|для)\s/gi,'$1$2 ');
+    return s.replace(/(\d)\s(?=\d|₸|минут|занят)/g,'$1 ');
+  }
+  var ruTitle=document.title;
+  function setLang(l,save){
+    lang=l;
+    document.documentElement.lang=l;
+    nodes.forEach(function(x){x.n.nodeValue=l==='kk'?KK[x.ru]:typo(x.ru);});
+    attrs.forEach(function(x){x.el.setAttribute(x.a,l==='kk'?KK[x.ru]:x.ru);});
+    document.title=l==='kk'?KK[ruTitle]:ruTitle;
+    document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===l));});
+    if(save){ try{localStorage.setItem('sl-lang',l);}catch(e){} }
+    update();
+  }
+  document.querySelectorAll('[data-lang]').forEach(function(b){
+    b.addEventListener('click',function(){setLang(b.dataset.lang,true);});
+  });
+  var start=null;
+  try{ start=new URLSearchParams(location.search).get('lang')||localStorage.getItem('sl-lang'); }catch(e){}
+  setLang(start==='kk'?'kk':'ru',false);
+})();
+</script>
+</body>
+</html>

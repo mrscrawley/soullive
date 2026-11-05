@@ -387,16 +387,25 @@ form .btn{justify-self:start;text-align:center;margin-top:6px}
   var ctx=null;
 
   // Karplus-Strong pluck; plays only after a click or key press
-  function sound(freq){
+  // Phones allow audio only when a tap ends, not when it starts, so touch plays from there. On iPhone the
+  // 'playback' session keeps the sound on when the ringer switch is silent.
+  function sound(freq,loud){
     try{
-      ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
-      if(ctx.state==='suspended') ctx.resume();
-      var sr=ctx.sampleRate,len=Math.floor(sr*1.5),n=Math.round(sr/freq);
-      var buf=ctx.createBuffer(1,len,sr),d=buf.getChannelData(0),i;
-      for(i=0;i<n;i++) d[i]=Math.random()*2-1;
-      for(i=n;i<len;i++) d[i]=0.4975*(d[i-n]+d[i-n-1>=0?i-n-1:0]);
-      var s=ctx.createBufferSource(),g=ctx.createGain();
-      g.gain.value=.22; s.buffer=buf; s.connect(g); g.connect(ctx.destination); s.start();
+      if(!ctx){
+        ctx=new (window.AudioContext||window.webkitAudioContext)();
+        if(navigator.audioSession) navigator.audioSession.type='playback';
+      }
+      var silent=ctx.createBufferSource();
+      silent.buffer=ctx.createBuffer(1,1,ctx.sampleRate); silent.connect(ctx.destination); silent.start();
+      var play=function(){
+        var sr=ctx.sampleRate,len=Math.floor(sr*1.5),n=Math.round(sr/freq);
+        var buf=ctx.createBuffer(1,len,sr),d=buf.getChannelData(0),i;
+        for(i=0;i<n;i++) d[i]=Math.random()*2-1;
+        for(i=n;i<len;i++) d[i]=0.4975*(d[i-n]+d[i-n-1>=0?i-n-1:0]);
+        var s=ctx.createBufferSource(),g=ctx.createGain();
+        g.gain.value=loud?.55:.22; s.buffer=buf; s.connect(g); g.connect(ctx.destination); s.start();
+      };
+      if(ctx.state==='running') play(); else ctx.resume().then(play,function(){});
     }catch(e){}
   }
 
@@ -435,7 +444,7 @@ form .btn{justify-self:start;text-align:center;margin-top:6px}
       var s=Math.abs(y-strings[0].y)<Math.abs(y-strings[1].y)?strings[0]:strings[1];
       return {s:s,x:x,dist:Math.abs(y-s.y)};
     }
-    var touching=null;
+    var touching=null,lastPointer='mouse';
     svg.addEventListener('pointerleave',function(){touching=null;});
     svg.addEventListener('pointermove',function(e){
       if(e.pointerType==='touch') return;
@@ -445,7 +454,27 @@ form .btn{justify-self:start;text-align:center;margin-top:6px}
       touching=over;
     });
     svg.addEventListener('pointerdown',function(e){
-      var n=nearest(e); if(n.dist>=reach*2) return; kick(n.s,n.x,12); sound(n.s.note);
+      lastPointer=e.pointerType;
+      var n=nearest(e),mouse=e.pointerType==='mouse';
+      if(n.dist>=reach*(mouse?2:4)) return;
+      kick(n.s,n.x,12);
+      if(mouse) sound(n.s.note);
+    });
+    // A tap plays on touchend: iOS may skip click, and touchend still counts as a user gesture. A swipe stays silent.
+    var tapX=0,tapY=0,tapAt=0;
+    svg.addEventListener('touchstart',function(e){
+      var p=e.changedTouches[0]; tapX=p.clientX; tapY=p.clientY;
+    },{passive:true});
+    svg.addEventListener('touchend',function(e){
+      var p=e.changedTouches[0];
+      if(Math.abs(p.clientX-tapX)>10||Math.abs(p.clientY-tapY)>10) return;
+      var n=nearest(p);
+      if(n.dist<reach*4){ tapAt=Date.now(); sound(n.s.note,true); }
+    });
+    svg.addEventListener('click',function(e){
+      if(lastPointer==='mouse'||Date.now()-tapAt<800) return;
+      var n=nearest(e);
+      if(n.dist<reach*4) sound(n.s.note,true);
     });
     // Focus ring only for keyboard users; a mouse click must not draw a box around the strings
     svg.addEventListener('keyup',function(e){ if(e.key==='Tab') svg.classList.add('kbd'); });
